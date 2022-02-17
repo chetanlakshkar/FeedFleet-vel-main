@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+// import { Link, Redirect, useHistory, withRouter } from 'react-router-dom';
 //Set the logged in user data in local session 
 const setLoggeedInUser = (user) => {
     localStorage.setItem('user', JSON.stringify(user));
@@ -19,9 +19,10 @@ const isUserAuthenticated = () => {
 }
 
 // Register Method
-const postRegister = (data) => {
+const postRegister = (url,data) => {
+    // const history = useHistory()
     console.log("postRegister ", data);
-    return axios.post("http://3.142.121.92:5000/api/v1/signup" , data).then(response => {
+    return axios.post(url,data).then(response => {
         //if (response.status >= 200 || response.status <= 299)
         console.log('response',response)
         return response.data;
@@ -42,11 +43,16 @@ const postRegister = (data) => {
 
 // Login Method
 const postLogin = (url, data) => {
-    return axios.get("http://3.142.121.92:5000/api/v1/login", data).then(response => {
+    return axios.post('http://localhost:5000/api/v1/login', data).then(response => {
         
         if (response.status === 400 || response.status === 500)
     
             throw response.data;
+            console.log(response.data.token,'dataaaaaaaaaaaaaa')
+            if(response.data.token){
+         
+                window.location.href='/dashboard'
+            }
             return response.data;
     }).catch(err => {
         throw err[1];
