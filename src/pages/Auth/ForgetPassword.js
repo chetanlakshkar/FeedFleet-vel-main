@@ -9,7 +9,7 @@ import { AvForm, AvField } from 'availity-reactstrap-validation';
 class ForgetPassword extends Component {
 
     constructor(props) {
-        super(props);
+        super();
         this.state = { username: "" }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
