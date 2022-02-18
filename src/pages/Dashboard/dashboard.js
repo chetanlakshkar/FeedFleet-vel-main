@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Card, CardBody, Button, Breadcrumb, BreadcrumbItem, Input, Table } from 'reactstrap';
-// import { activateAuthLayout } from '../../store/actions';
+ import { activateAuthLayout } from '../../store/actions';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import SettingMenu from '../Subpages/Settingmenu';
 import { Scrollbars } from 'react-custom-scrollbars';
+
 
 // Charts
 import LineAreaChart from '../AllCharts/apex/lineareachart';
@@ -40,7 +41,7 @@ class Dashboard extends Component {
     }
 
     componentDidMount() {
-        // this.props.activateAuthLayout();
+         this.props.activateAuthLayout();
     }
 
     render() {
@@ -572,5 +573,5 @@ class Dashboard extends Component {
     }
 }
 
-export default withRouter(connect(null)(Dashboard));
-// export default withRouter(connect(null, { activateAuthLayout })(Dashboard));
+// export default withRouter(connect(null)(Dashboard));
+export default withRouter(connect(null, { activateAuthLayout })(Dashboard));

@@ -75,6 +75,7 @@ import Gallery from './pages/ExtraPages/pages-gallery';
 import Maintenance from './pages/ExtraPages/pages-maintenance';
 import ComingSoon from './pages/ExtraPages/pages-comingsoon';
 import Faq from './pages/ExtraPages/pages-faq';
+import Profile from './pages/ExtraPages/pages-profile'
 
 import Pageslogin2 from './pages/ExtraPages/pages-login-2';
 import Pagesregister2 from './pages/ExtraPages/pages-register-2';
@@ -179,6 +180,7 @@ const routes = [
     { path: '/pages-maintenance', component: Maintenance },
     { path: '/pages-comingsoon', component: ComingSoon },
     { path: '/pages-faq', component: Faq },
+    { path: '/pages-profile', component: Profile },
 
     { path: '/pages-login-2', component: Pageslogin2 },
     { path: '/pages-register-2', component: Pagesregister2 },
