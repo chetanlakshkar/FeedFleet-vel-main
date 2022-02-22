@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { activateAuthLayout } from "../../store/actions";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
+import { ReactMediaRecorder } from "react-media-recorder";
 class Createnewcampaign extends Component {
   constructor(props) {
     super(props);

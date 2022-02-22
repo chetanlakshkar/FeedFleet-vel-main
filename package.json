@@ -46,6 +46,7 @@
     "react-image-lightbox": "^5.1.0",
     "react-input-mask": "^2.0.4",
     "react-jvectormap": "0.0.12",
+    "react-media-recorder": "^1.6.3",
     "react-metismenu": "^1.4.0",
     "react-modal-video": "^1.2.2",
     "react-perfect-scrollbar": "^1.5.3",
@@ -89,6 +90,7 @@
   },
   "devDependencies": {
     "dotenv": "^14.3.2",
+    "react-error-overlay": "^6.0.9",
     "sass": "^1.49.0"
   }
 }

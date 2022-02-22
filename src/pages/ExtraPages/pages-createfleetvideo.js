@@ -2,20 +2,18 @@ import React, { Component } from "react";
 import { activateAuthLayout } from "../../store/actions";
 import { Link, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
-class Createfleetvideo extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+import { ReactMediaRecorder } from "react-media-recorder";
 
-  componentDidMount() {
-    this.props.activateAuthLayout();
-  }
 
-  render() {
-    return (
-      <div className="text-center container">
-        <h1>
+const Createfleetvideo = () => (
+  
+  
+  <div>
+    <ReactMediaRecorder
+      video
+      render={({  startRecording, stopRecording, mediaBlobUrl }) => (
+        <div className="text-center container">
+            <h1>
           <b>Welcome to Intro Video</b>
         </h1>
         <br />
@@ -25,10 +23,10 @@ class Createfleetvideo extends Component {
           all your Intro Video videos, and generate your Video Widget code
         </div>
         <br />
-
-        <div className="col-md-12 vertical-center ">
-          <button type="button" className="btn btn-primary ">
-            <i class="fa fa-video-camera icon_cam"></i>
+         
+         <div className="col-md-12 vertical-center ">
+          <button type="button" className="btn btn-primary" onClick={startRecording}>
+            <i className="fa fa-video-camera icon_cam"></i>
             <br />
             <br />
             Start Recording
@@ -36,17 +34,21 @@ class Createfleetvideo extends Component {
         </div>
         <br />
         <div className="col-md-12 vertical-center ">
-          <button type="button" className="btn btn-primary ">
-            <i class="fa fa-upload icon_cam"></i>
+        <button type="button" className="btn btn-primary " onClick={stopRecording}>
+            <i className="fa fa-upload icon_cam"></i>
             <br />
             <br />
-            Upload Video
+            stopRecording
           </button>
+          </div>
+          <video className="m-5" src={mediaBlobUrl} controls autoPlay loop />
         </div>
-      </div>
-    );
-  }
-}
+      )}
+    />
+  </div>
+);
+
+
 
 export default withRouter(
   connect(null, { activateAuthLayout })(Createfleetvideo)

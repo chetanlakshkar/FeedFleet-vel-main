@@ -160,3 +160,4 @@ export class Profile extends Component {
   }
 }
 export default withRouter(connect(null, { activateAuthLayout })(Profile));
+//export default (Profile);
