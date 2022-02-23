@@ -14,13 +14,13 @@ export class Support extends Component {
   }
   render() {
     return (
-      <div className=" m-5 d-flex justify-content-center" >
+      <div className=" row m-5 d-flex justify-content-center" >
         <div className="col-md-10 card " >
-          <h4>
-            <i class="fa fa-camera-retro fa-lg mr-2"></i>Ticket List
-          </h4>
+        <h4><span><img src='https://image.shutterstock.com/image-vector/ticket-icon-flat-600w-567375721.jpg' style={{height:'7vh',width:'7vh'}}></img>
+          Ticket List  
+          </span></h4>
           <div>
-            <a className="btn btn-sm btn-success float-right m-10" href="#">
+            <a className="btn btn-sm btn-success float-right m-10" href="/pages-AddNewTicket">
               Add New Ticket
             </a>
             <div className="float-left m-5">
@@ -52,12 +52,12 @@ export class Support extends Component {
               </thead>
               <tbody>
               <tr>
-                <td>Title</td>
-                <td>Priority</td>
-                <td>Status</td>
-                <td>Category</td>
-                <td>Last Reply</td>
-                <td>Actions</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
             
               </tbody>

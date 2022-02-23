@@ -77,6 +77,8 @@ import ComingSoon from './pages/ExtraPages/pages-comingsoon';
 import Faq from './pages/ExtraPages/pages-faq';
 import Profile from './pages/ExtraPages/pages-profile';
 import Support from './pages/ExtraPages/pages-support';
+import AddNewTicket from './pages/ExtraPages/pages-AddNewTicket';
+import TicketAction from './pages/ExtraPages/pages-TicketAction';
 
 
 import Pageslogin2 from './pages/ExtraPages/pages-login-2';
@@ -184,6 +186,8 @@ const routes = [
     { path: '/pages-faq', component: Faq },
     { path: '/pages-profile', component: Profile },
     { path: '/pages-support', component: Support },
+    { path: '/pages-AddNewTicket', component: AddNewTicket },
+    { path: '/pages-TicketAction', component: TicketAction },
     
 
     { path: '/pages-login-2', component: Pageslogin2 },
